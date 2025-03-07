@@ -50,8 +50,43 @@ public class Piece {
     //return a list of every square that is "controlled" by this piece. A square is controlled
     //if the piece capture into it legally.
     public ArrayList<Square> getControlledSquares(Square[][] board, Square start) {
-     return null;
-    }
+      ArrayList<Square> moves = new ArrayList<Square>();
+
+      int row =start.getRow(); 
+      int col =start.getCol();
+      //check to see if the spot is out of bounds, or it's in bounds but occupied by my own colored piece and if neither is a problem go there!
+  
+        if (row+3<=7 && col+1<=7 && (!board[row+3][col+1].isOccupied() || board[row+3][col+1].getOccupyingPiece().getColor() != color)){
+          moves.add(board[row+3][col+1]);
+        };
+        if (row-3>=0 && col+1<=7 && (!board[row-3][col+1].isOccupied() || board[row-3][col+1].getOccupyingPiece().getColor() != color)){
+          moves.add(board[row-3][col+1]);
+        };
+        if (row-3>=0 && col-1>=0 && (!board[row-3][col-1].isOccupied() || board[row-3][col-1].getOccupyingPiece().getColor() != color)){
+          moves.add(board[row-3][col-1]);
+        };
+        if (row+3<=7 && col-1>=0 && (!board[row+3][col-1].isOccupied() || board[row+3][col-1].getOccupyingPiece().getColor() != color)){
+          moves.add(board[row+3][col-1]);
+        };
+        if (row+1<=7 && col-3<=7 && (!board[row+1][col-3].isOccupied() || board[row+1][col-3].getOccupyingPiece().getColor() != color)){
+          moves.add(board[row+1][col-3]);
+        };
+        if (row+1<=7 && col+3<=7 && (!board[row+1][col+3].isOccupied() || board[row+1][col+3].getOccupyingPiece().getColor() != color)){
+          moves.add(board[row+1][col+3]);
+        };
+        if (row-1>=0 && col-3>=0 && (!board[row-1][col-3].isOccupied() || board[row-1][col-3].getOccupyingPiece().getColor() != color)){
+          moves.add(board[row-1][col-3]);
+        };
+        if (row-1>=0 && col+3<=7 && (!board[row-1][col+3].isOccupied() || board[row-1][col+3].getOccupyingPiece().getColor() != color)){
+          moves.add(board[row-1][col+3]);
+        };
+
+     return moves;
+
+        }
+       
+      
+    
     
 
     //TO BE IMPLEMENTED!
@@ -61,6 +96,42 @@ public class Piece {
     //please note that your piece must have some sort of logic. Just being able to move to every square on the board is not
     //going to score any points.
     public ArrayList<Square> getLegalMoves(Board b, Square start){
-    	return null;
-    }
-}
+      ArrayList<Square> moves = new ArrayList<Square>();
+
+      int row =start.getRow(); 
+      int col =start.getCol();
+      //check to see if the spot is out of bounds, or it's in bounds but occupied by my own colored piece and if neither is a problem go there!
+  
+        if (row+3<=7 && col+1<=7 && (!b.getSquareArray()[row+3][col+1].isOccupied() || b.getSquareArray()[row+3][col+1].getOccupyingPiece().getColor() != color)){
+          moves.add(b.getSquareArray()[row+3][col+1]);
+        };
+        if (row-3>=0 && col+1<=7 && (!b.getSquareArray()[row-3][col+1].isOccupied() || b.getSquareArray()[row-3][col+1].getOccupyingPiece().getColor() != color)){
+          moves.add(b.getSquareArray()[row-3][col+1]);
+        };
+        if (row-3>=0 && col-1>=0 && (!b.getSquareArray()[row-3][col-1].isOccupied() || b.getSquareArray()[row-3][col-1].getOccupyingPiece().getColor() != color)){
+          moves.add(b.getSquareArray()[row-3][col-1]);
+        };
+        if (row+3<=7 && col-1>=0 && (!b.getSquareArray()[row+3][col-1].isOccupied() || b.getSquareArray()[row+3][col-1].getOccupyingPiece().getColor() != color)){
+          moves.add(b.getSquareArray()[row+3][col-1]);
+        };
+        if (row+1<=7 && col-3>=0 && (!b.getSquareArray()[row+1][col-3].isOccupied() || b.getSquareArray()[row+1][col-3].getOccupyingPiece().getColor() != color)){
+          moves.add(b.getSquareArray()[row+1][col-3]);
+        };
+        if (row+1<=7 && col+3<=7 && (!b.getSquareArray()[row+1][col+3].isOccupied() || b.getSquareArray()[row+1][col+3].getOccupyingPiece().getColor() != color)){
+          moves.add(b.getSquareArray()[row+1][col+3]);
+        };
+        if (row-1>=0 && col-3>=0 && (!b.getSquareArray()[row-1][col-3].isOccupied() || b.getSquareArray()[row-1][col-3].getOccupyingPiece().getColor() != color)){
+          moves.add(b.getSquareArray()[row-1][col-3]);
+        };
+        if (row-1>=0 && col+3<=7 && (!b.getSquareArray()[row-1][col+3].isOccupied() || b.getSquareArray()[row-1][col+3].getOccupyingPiece().getColor() != color)){
+          moves.add(b.getSquareArray()[row-1][col+3]);
+        };
+
+     return moves;
+
+        }
+       
+      }
+    
+    
+    
