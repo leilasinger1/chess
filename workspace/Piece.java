@@ -45,7 +45,8 @@ public class Piece {
         g.drawImage(this.img, x, y, null);
     }
     
-    
+    //precondition: moves do not go out of bounds
+    //post condition: finds the correct square that the piece can move too, up or down 3, left or right 1.
     // TO BE IMPLEMENTED!
     //return a list of every square that is "controlled" by this piece. A square is controlled
     //if the piece capture into it legally.
@@ -87,8 +88,8 @@ public class Piece {
        
       
     
-    
-
+//precondition: moves do not go out of bounds
+//post condition: finds the correct square that the piece can move too, up or down 3, left or right 1. (Long knight)
     //TO BE IMPLEMENTED!
     //implement the move function here
     //it's up to you how the piece moves, but at the very least the rules should be logical and it should never move off the board!
