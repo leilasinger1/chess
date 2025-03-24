@@ -1,4 +1,5 @@
-
+//Leila Singer
+//Long Knight uses the components of a knight piece, but goes up and down 3, and left and right 1 space instead.
 import java.awt.Graphics;
 import java.awt.Image;
 import java.awt.image.BufferedImage;
