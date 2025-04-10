@@ -21,6 +21,9 @@ System.out.println("File not found: " + e.getMessage());
 public boolean getColor() {
 return color;
 }
+public boolean isWhite(){
+  return color;
+}
 public Image getImage() {
 return img;
 }

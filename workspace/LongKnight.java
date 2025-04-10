@@ -52,7 +52,7 @@ public class LongKnight extends Piece {
         if (row+3<=7 && col-1>=0){
           moves.add(board[row+3][col-1]);
         };
-        if (row+1<=7 && col-3<=7 ){
+        if (row+1<=7 && col-3>=0 ){
           moves.add(board[row+1][col-3]);
         };
         if (row+1<=7 && col+3<=7 ){
